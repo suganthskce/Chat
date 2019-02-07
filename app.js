@@ -33,6 +33,7 @@ io.on('connection', (socket) => {
 
     //listen to change in username
     socket.on('change_username',(data)=>{
+        console.log("Username=->",data.username);
         socket.username = data.username;
     });
 

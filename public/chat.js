@@ -1,4 +1,5 @@
 $(function () {
+    //var socket = io.connect('http://192.168.22.249:8080');
     var socket = io.connect('http://localhost:8080');
 console.log("Scritp loaded");
     // buttons and inputs
@@ -24,6 +25,6 @@ console.log("Scritp loaded");
     //Listen Message
     socket.on("new_message", (data) => {
         console.log("Recieved message",data);
-        chatroom.append('<p class = "message">' + data.username + ': ' + data.message + '</p>');
+        chatroom.prepend('<p class = "message">' + data.username + ': ' + data.message + '</p>');
     });
 })
