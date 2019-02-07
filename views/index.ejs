@@ -43,37 +43,27 @@
     .btn {
         height:100%;
     }
+
+    .input-username{
+        height: 10%;
+    }
   </style>
 
   <body>
 
     <div class="container-flude">
-    	
-                <div class="msg-group center">
-                	
-                    <div class="card">
-                         <div class="card-body">
-                             <h6 class="card-subtitle mb-2 text-muted text-left">yingshaoxo</h6>
-                             <p class="card-text float-left">Hi ~</p>
-                         </div>
-                    </div>
-                      
-                    <div class="card">
-                         <div class="card-body">
-                             <h6 class="card-subtitle mb-2 text-muted text-right">yingshaoxo</h6>
-                             <p class="card-text float-right">Welcome to here!</p>
-                         </div>
-                    </div>                      
-                   
+        <div class="input-username">
+                <textarea id="username" class="form-control" rows="1" placeholder="Username"></textarea>
+                <button id = "send_username" class="btn btn-secondary" type="button">send</button>
+        </div>
+                <div id = "chatroom" class="msg-group center">                     
                 </div>
-                
                 <div class="input-group">
-                	<textarea id="input-box" class="form-control" rows="1" placeholder="Say something..."></textarea>
+                	<textarea id="message" class="form-control" rows="1" placeholder="Say something..."></textarea>
                     <span class="input-group-btn">
-                        <button class="btn btn-secondary" type="button">send</button>
+                        <button id = "send_message" class="btn btn-secondary" type="button">send</button>
                     </span>
-               </div>
-              
+               </div>  
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
     <script src='http://code.jquery.com/jquery-latest.min.js'></script>

@@ -27,4 +27,18 @@ const io = require('socket.io')(server);
 //listen to all connection
 io.on('connection', (socket) => {
     console.log("New User Connected");
+
+    //default username
+    socket.username = "Anonymous";
+
+    //listen to change in username
+    socket.on('change_username',(data)=>{
+        socket.username = data.username;
+    });
+
+    //listen to new message
+    socket.on('new_message', (data) => {
+        //broadcast new message
+        io.sockets.emit('new_message',{message: data.message,username: socket.username});
+    });
 });
