@@ -14,7 +14,7 @@ app.get('/',(req,res) => {
 });
 
 //Listen to port
-server = app.listen(8080 , "0.0.0.0", (error) => {
+server = app.listen(3000 , "0.0.0.0", (error) => {
     console.log("App started at port -> 8080");
     if(error) {
         console.log("Error -> ",error);

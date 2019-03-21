@@ -1,7 +1,5 @@
 $(function () {
-    //var socket = io.connect('http://192.168.22.249:8080');
-    var socket = io.connect('http://18.191.217.65:8080');
-    //var socket = io.connect('http://localhost:8080');
+    var socket = io.connect('http://ec2-18-220-169-186.us-east-2.compute.amazonaws.com/');
 console.log("Scritp loaded");
     // buttons and inputs
     var message = $("#message");
